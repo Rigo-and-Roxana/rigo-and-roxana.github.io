@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarah & Michael's Wedding</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">S&M</a>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#our-story">Our Story</a></li>
+                <li><a href="#details">Details</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#registry">Registry</a></li>
+                <li><a href="#rsvp" class="nav-rsvp">RSVP</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h3 class="hero-subtitle">We're getting married!</h3>
+            <h1 class="hero-title">Sarah <span>&</span> Michael</h1>
+            <p class="hero-date">October 12, 2024 • Seattle, Washington</p>
+            <div class="countdown">
+                <h4>Countdown to our big day</h4>
+                <div class="countdown-container">
+                    <div class="countdown-box">
+                        <span id="days">00</span>
+                        <p>Days</p>
+                    </div>
+                    <div class="countdown-box">
+                        <span id="hours">00</span>
+                        <p>Hours</p>
+                    </div>
+                    <div class="countdown-box">
+                        <span id="minutes">00</span>
+                        <p>Minutes</p>
+                    </div>
+                    <div class="countdown-box">
+                        <span id="seconds">00</span>
+                        <p>Seconds</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-image"></div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section id="our-story" class="section">
+        <div class="container">
+            <h2 class="section-title">Our Story</h2>
+            <div class="story-container">
+                <div class="story-item">
+                    <div class="story-date">June 2019</div>
+                    <h3 class="story-title">The First Meeting</h3>
+                    <p class="story-text">We met at a friend's coffee shop in Capitol Hill. Michael spilled his latte on Sarah's notebook, and instead of getting angry, she laughed. We talked for three hours that day.</p>
+                </div>
+                <div class="story-item">
+                    <div class="story-date">December 2021</div>
+                    <h3 class="story-title">The First Adventure</h3>
+                    <p class="story-text">Our first big trip together was to the Oregon Coast during a winter storm. We got caught in the rain, built a fire in our rented cabin, and knew we were meant to be.</p>
+                </div>
+                <div class="story-item">
+                    <div class="story-date">August 2023</div>
+                    <h3 class="story-title">The Proposal</h3>
+                    <p class="story-text">On a hike to Rattlesnake Ledge at sunset, Michael got down on one knee. Sarah said "yes" as the sun dipped behind the mountains. It was perfect.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wedding Details -->
+    <section id="details" class="section details-section">
+        <div class="container">
+            <h2 class="section-title">Wedding Details</h2>
+            <div class="details-grid">
+                <div class="detail-card">
+                    <div class="detail-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3 class="detail-title">Date & Time</h3>
+                    <p class="detail-text">Saturday, October 12, 2024</p>
+                    <p class="detail-text">Ceremony: 4:00 PM</p>
+                    <p class="detail-text">Reception to follow</p>
+                </div>
+                <div class="detail-card">
+                    <div class="detail-icon">
+                        <i class="fas fa-church"></i>
+                    </div>
+                    <h3 class="detail-title">Ceremony</h3>
+                    <p class="detail-text">St. Mark's Cathedral</p>
+                    <p class="detail-text">1245 10th Ave E</p>
+                    <p class="detail-text">Seattle, WA 98102</p>
+                </div>
+                <div class="detail-card">
+                    <div class="detail-icon">
+                        <i class="fas fa-glass-cheers"></i>
+                    </div>
+                    <h3 class="detail-title">Reception</h3>
+                    <p class="detail-text">The Mountaineering Club</p>
+                    <p class="detail-text">4507 Brooklyn Ave NE</p>
+                    <p class="detail-text">Seattle, WA 98105</p>
+                </div>
+                <div class="detail-card">
+                    <div class="detail-icon">
+                        <i class="fas fa-bed"></i>
+                    </div>
+                    <h3 class="detail-title">Accommodations</h3>
+                    <p class="detail-text">Graduate Seattle Hotel</p>
+                    <p class="detail-text">Block code: SMWED2024</p>
+                    <p class="detail-text">(206) 634-2000</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section id="gallery" class="section">
+        <div class="container">
+            <h2 class="section-title">Our Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1544717305-2782549b5136?ixlib=rb-4.0.3&auto=format&fit=crop&w-800&q=80');"></div>
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1511988617509-a57c8a288659?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1529254479751-fbacb4c7a587?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registry -->
+    <section id="registry" class="section registry-section">
+        <div class="container">
+            <h2 class="section-title">Gift Registry</h2>
+            <p class="registry-text">Your presence at our wedding is the greatest gift of all. However, if you wish to honor us with a gift, we are registered at the following stores:</p>
+            <div class="registry-links">
+                <a href="#" class="registry-link">
+                    <i class="fas fa-gift"></i>
+                    <span>Crate & Barrel</span>
+                </a>
+                <a href="#" class="registry-link">
+                    <i class="fas fa-umbrella-beach"></i>
+                    <span>Honeymoon Fund</span>
+                </a>
+                <a href="#" class="registry-link">
+                    <i class="fas fa-home"></i>
+                    <span>Williams Sonoma</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- RSVP Section -->
+    <section id="rsvp" class="section rsvp-section">
+        <div class="container">
+            <h2 class="section-title">RSVP</h2>
+            <p class="rsvp-subtitle">Please respond by September 12, 2024</p>
+            
+            <div class="rsvp-form-container">
+                <!-- Note about RSVP functionality -->
+                <div class="rsvp-note">
+                    <p><i class="fas fa-info-circle"></i> This form submits to Google Sheets. <a href="#setup-instructions">See setup instructions below.</a></p>
+                </div>
+                
+                <form id="rsvpForm" class="rsvp-form">
+                    <div class="form-group">
+                        <label for="name">Full Name(s) *</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="Enter your email">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="guests">Number of Guests *</label>
+                        <select id="guests" name="guests" required>
+                            <option value="" disabled selected>Select number of guests</option>
+                            <option value="1">1 (Just me)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5+</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Will you attend? *</label>
+                        <div class="radio-group">
+                            <label class="radio-option">
+                                <input type="radio" name="attending" value="Yes" required>
+                                <span class="radio-button"></span>
+                                <span>Joyfully Accepts</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="attending" value="No" required>
+                                <span class="radio-button"></span>
+                                <span>Regretfully Declines</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="dietary">Dietary Restrictions / Allergies</label>
+                        <textarea id="dietary" name="dietary" rows="3" placeholder="Vegetarian, gluten-free, allergies, etc."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message for the Couple</label>
+                        <textarea id="message" name="message" rows="3" placeholder="Share your well wishes or memories"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Submit RSVP</button>
+                </form>
+                
+                <div id="formMessage" class="form-message"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Setup Instructions (Hidden by default) -->
+    <section id="setup-instructions" class="section setup-section">
+        <div class="container">
+            <h2 class="section-title">Setup Instructions</h2>
+            <div class="instructions">
+                <h3>To make this website work:</h3>
+                <ol>
+                    <li>Replace all placeholder text with your details</li>
+                    <li>Update the wedding date in the HTML and countdown.js</li>
+                    <li>Replace Unsplash image URLs with your own photos</li>
+                    <li><strong>For RSVP functionality:</strong>
+                        <ul>
+                            <li>Create a Google Form and link it to Google Sheets</li>
+                            <li>Use a service like <a href="https://www.tally.so/" target="_blank">Tally Forms</a> or <a href="https://formspree.io/" target="_blank">Formspree</a> for easier setup</li>
+                            <li>Update the form action URL in rsvp.js</li>
+                        </ul>
+                    </li>
+                    <li>Upload to GitHub and enable GitHub Pages in repository settings</li>
+                </ol>
+                <button id="toggleInstructions" class="toggle-btn">Hide Instructions</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">With love, Sarah & Michael</p>
+            <p class="footer-subtext">October 12, 2024 • Seattle, Washington</p>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+                <a href="#"><i class="fas fa-phone"></i></a>
+            </div>
+            <p class="footer-note">Made with ❤️ for our wedding</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="countdown.js"></script>
+    <script src="navigation.js"></script>
+    <script src="rsvp.js"></script>
+</body>
+</html>
