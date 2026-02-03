@@ -4,31 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rigo & Roxana's Wedding</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
- <style>
-        /* Navigation Bar Styles */
+    <style>
+        /* Global Justify Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            line-height: 1.6;
+            text-align: center; /* Center all text globally */
+            width: 100%;
+            overflow-x: hidden;
+        }
+        
+        /* Navigation */
         .top-nav {
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.98);
             box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
             z-index: 1000;
             padding: 15px 0;
+            text-align: center;
         }
         
         .nav-content {
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
+            gap: 60px;
             padding: 0 20px;
         }
         
@@ -47,6 +57,7 @@
             gap: 40px;
             margin: 0;
             padding: 0;
+            justify-content: center;
         }
         
         .nav-links a {
@@ -54,78 +65,273 @@
             color: #2c3e50;
             font-size: 18px;
             font-weight: 500;
-            transition: all 0.3s ease;
-            position: relative;
-            padding: 5px 0;
+            transition: color 0.3s ease;
         }
         
         .nav-links a:hover {
             color: #d4af73;
         }
         
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            background: #d4af73;
-            bottom: 0;
-            left: 0;
-            transition: width 0.3s ease;
-        }
-        
-        .nav-links a:hover::after {
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 120px 20px 60px;
+            background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+            text-align: center;
             width: 100%;
         }
         
-        /* Adjust hero padding for fixed nav */
-        .hero {
-            padding-top: 100px;
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
         }
         
-        /* Responsive */
+        .hero-title {
+            font-size: 2.2rem;
+            margin: 20px 0;
+            line-height: 1.4;
+        }
+        
+        .spanish-text {
+            color: #d4af73;
+        }
+        
+        .english-text {
+            color: #80602d;
+        }
+        
+        .couple-names {
+            font-size: 4.5rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .couple-names span {
+            color: #d4af73;
+            margin: 0 20px;
+        }
+        
+        .hero-date {
+            font-size: 1.5rem;
+            margin: 10px 0;
+            text-align: center;
+        }
+        
+        .location {
+            color: #666;
+            font-size: 1.3rem;
+            margin: 20px 0 40px;
+        }
+        
+        /* Countdown */
+        .countdown {
+            margin: 50px auto 0;
+            max-width: 800px;
+            text-align: center;
+        }
+        
+        .countdown h4 {
+            font-size: 1.5rem;
+            margin: 15px 0;
+        }
+        
+        .countdown-container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin: 30px auto;
+            flex-wrap: wrap;
+        }
+        
+        .countdown-box {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            min-width: 120px;
+            text-align: center;
+        }
+        
+        .countdown-box span {
+            display: block;
+            font-size: 3rem;
+            font-weight: 700;
+            color: #d4af73;
+        }
+        
+        .countdown-box p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-top: 10px;
+        }
+        
+        /* Sections */
+        .section {
+            padding: 80px 20px;
+            text-align: center;
+            width: 100%;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .section-title {
+            font-size: 3.5rem;
+            font-weight: 600;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+        .details-section {
+            background: #f8f5f0;
+        }
+        
+        .coming-soon {
+            font-size: 2rem;
+            font-style: italic;
+            margin: 20px 0;
+        }
+        
+        /* Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1100px;
+            margin: 40px auto 0;
+            justify-content: center;
+        }
+        
+        .gallery-item {
+            height: 300px;
+            border-radius: 10px;
+            background-size: cover;
+            background-position: center;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 400px;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 60px 20px 30px;
+            text-align: center;
+            width: 100%;
+        }
+        
+        .footer-text {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #d4af73;
+        }
+        
+        .footer-note {
+            font-size: 1.2rem;
+            margin: 10px 0;
+            color: #bbb;
+        }
+        
+        /* Responsive Design */
         @media (max-width: 768px) {
             .nav-content {
                 flex-direction: column;
                 gap: 15px;
-                padding: 15px 20px;
             }
             
             .nav-links {
                 gap: 25px;
                 flex-wrap: wrap;
-                justify-content: center;
             }
             
             .nav-links a {
                 font-size: 16px;
             }
             
+            .couple-names {
+                font-size: 3.2rem;
+            }
+            
+            .hero-title {
+                font-size: 1.8rem;
+            }
+            
+            .hero-date {
+                font-size: 1.2rem;
+            }
+            
+            .section-title {
+                font-size: 2.8rem;
+            }
+            
+            .countdown-box {
+                min-width: 90px;
+                padding: 20px;
+            }
+            
+            .countdown-box span {
+                font-size: 2.2rem;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+            
             .hero {
-                padding-top: 140px;
+                padding-top: 150px;
             }
         }
         
         @media (max-width: 480px) {
+            .couple-names {
+                font-size: 2.5rem;
+            }
+            
+            .hero-title {
+                font-size: 1.5rem;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .countdown-container {
+                gap: 15px;
+            }
+            
+            .countdown-box {
+                min-width: 80px;
+                padding: 15px;
+            }
+            
+            .countdown-box span {
+                font-size: 2rem;
+            }
+            
             .nav-links {
                 gap: 20px;
             }
             
-            .nav-links a {
-                font-size: 15px;
-            }
-            
-            .nav-logo {
-                font-size: 24px;
+            .nav-content {
+                gap: 10px;
             }
         }
     </style>
 </head>
 <body>
-
-	
-    <!-- Navigation Bar-->
- 	<nav class="top-nav">
+    <!-- Navigation Bar -->
+    <nav class="top-nav">
         <div class="nav-content">
             <a href="#home" class="nav-logo">RC & RC</a>
             <ul class="nav-links">
@@ -136,19 +342,18 @@
         </div>
     </nav>
     
-  <!-- Hero Section -->
+    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
             <h1 class="hero-title spanish-text">¡Te invitamos cordialmente a nuestra boda!</h1>
             <h1 class="hero-title english-text">We cordially invite you to our wedding!</h1>
             <h1 class="couple-names">Roxana <span>&</span> Rigo</h1>
-            <p class="hero-date spanish-text">• 16 de Enero, 2027 •</p>
-            <p class="hero-date english-text">• January 16, 2027 •</p>
-            <p class="hero-date location">Concepción de Buenos Aires, Jalisco, MX</p>
+            <p class="hero-date spanish-text">• 16 de Enero, 2027 // January 16, 2027 •</p>
+            <p class="hero-date english-text"></p>
+            <p class="hero-date location">Concepción de Buenos Aires, Jalisco, México</p>
             
             <div class="countdown">
-                <h4 class="spanish-text">Cuenta regresiva para nuestro gran día</h4>
-                <h4 class="english-text">Countdown to our big day</h4>
+                <h4 class="spanish-text">Cuenta regresiva para nuestro gran día // Countdown to our big day</h4>
                 <div class="countdown-container">
                     <div class="countdown-box">
                         <span id="days">00</span>
@@ -169,16 +374,13 @@
                 </div>
             </div>
         </div>
-        <div class="hero-image"></div>
     </section>
 
     <!-- Wedding Details -->
     <section id="details" class="section details-section">
         <div class="container">
-            <h2 class="section-title spanish-text">Detalles de Nuestra Boda</h2>
-            <h2 class="section-title english-text">Wedding Details</h2>
-            <p class="coming-soon spanish-text">Más por venir...</p>
-            <p class="coming-soon english-text">More to come...</p>
+            <h2 class="section-title spanish-text">Detalles de Nuestra Boda // Wedding Details</h2>
+            <p class="coming-soon spanish-text">Más por venir... More to come...</p>
         </div>
     </section>
 
@@ -198,29 +400,33 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p class="footer-text">With love, Rigo & Roxana</p>
-            <p class="footer-note spanish-text">Hecho con ❤️ para nuestra boda</p>
-            <p class="footer-note english-text">Made with ❤️ for our wedding</p>
+            <p class="footer-note spanish-text">Hecho con ❤️ para nuestra boda // Made with ❤️ for our wedding</p>
         </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="countdown.js"></script>
+
+
+	
+    <!-- Scrolling for Nav -->
     <script>
-        // Simple navigation scroll effect
-        document.querySelectorAll('.nav-links a').forEach(anchor => {
+       
+
+        // Smooth scrolling for navigation
+        document.querySelectorAll('.nav-links a, .nav-logo').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 const targetId = this.getAttribute('href');
                 const targetElement = document.querySelector(targetId);
                 
-                window.scrollTo({
-                    top: targetElement.offsetTop - 80,
-                    behavior: 'smooth'
-                });
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
             });
         });
-        
+
         // Navbar shadow on scroll
         window.addEventListener('scroll', () => {
             const nav = document.querySelector('.top-nav');
