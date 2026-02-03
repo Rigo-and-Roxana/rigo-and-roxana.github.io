@@ -10,44 +10,145 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+ <style>
+        /* Navigation Bar Styles */
+        .top-nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            padding: 15px 0;
+        }
+        
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .nav-logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: #d4af73;
+            text-decoration: none;
+            letter-spacing: 2px;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-size: 18px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 5px 0;
+        }
+        
+        .nav-links a:hover {
+            color: #d4af73;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: #d4af73;
+            bottom: 0;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        /* Adjust hero padding for fixed nav */
+        .hero {
+            padding-top: 100px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-content {
+                flex-direction: column;
+                gap: 15px;
+                padding: 15px 20px;
+            }
+            
+            .nav-links {
+                gap: 25px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .nav-links a {
+                font-size: 16px;
+            }
+            
+            .hero {
+                padding-top: 140px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .nav-links {
+                gap: 20px;
+            }
+            
+            .nav-links a {
+                font-size: 15px;
+            }
+            
+            .nav-logo {
+                font-size: 24px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
-        <div class="nav-container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
-            </button>
-			<a class="navbar-brand page-scroll" href="#top"><font size = 4>RC & RC.</a>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a class="page-scroll" href="#home"><font size=4>Home</font></a></li>
-                <li><a class="page-scroll" href="#details"><font size=4>Details</font></a></li>
-                <li><a class="page-scroll" href="#gallery"><font size=4>Gallery</font></a></li>
+
+	
+    <!-- Navigation Bar-->
+ 	<nav class="top-nav">
+        <div class="nav-content">
+            <a href="#home" class="nav-logo">RC & RC</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#details">Details</a></li>
+                <li><a href="#gallery">Gallery</a></li>
             </ul>
         </div>
-        <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container-fluid -->
-</nav>
-
+    </nav>
     
-    <!-- Hero Section -->
-    <section id="home" class="hero" style="text-align: center;">
+  <!-- Hero Section -->
+    <section id="home" class="hero">
         <div class="hero-content">
-            <h1 style="color: #d4af73;" class="hero-title">¡Te invitamos cordialmente a nuestra boda!</h1>
-			<h1 style="color: #80602d;" class="hero-title">We cordially invite you to our wedding!</h1>
-            <h1 class="hero-title">Roxana <span>&</span> Rigo</h1>
-            <p style="color: #d4af73;"class="hero-date">• 16 de Enero, 2027 •</p>
-			<p style="color: #80602d;"class="hero-date">• January 16, 2027 •</p>
-			<p class="hero-date">Concepción de Buenos Aires, Jalisco, MX</p>
+            <h1 class="hero-title spanish-text">¡Te invitamos cordialmente a nuestra boda!</h1>
+            <h1 class="hero-title english-text">We cordially invite you to our wedding!</h1>
+            <h1 class="couple-names">Roxana <span>&</span> Rigo</h1>
+            <p class="hero-date spanish-text">• 16 de Enero, 2027 •</p>
+            <p class="hero-date english-text">• January 16, 2027 •</p>
+            <p class="hero-date location">Concepción de Buenos Aires, Jalisco, MX</p>
+            
             <div class="countdown">
-                <h4 style="color: #d4af73;"Cuenta regresiva para nuestro gran día</h4>
-				 <h4 style="color: #80602d;"Countdown to our big day</h4>
+                <h4 class="spanish-text">Cuenta regresiva para nuestro gran día</h4>
+                <h4 class="english-text">Countdown to our big day</h4>
                 <div class="countdown-container">
                     <div class="countdown-box">
                         <span id="days">00</span>
@@ -71,50 +172,64 @@
         <div class="hero-image"></div>
     </section>
 
-    
-
     <!-- Wedding Details -->
-    <section id="details" class="section details-section" style="text-align: center;">
+    <section id="details" class="section details-section">
         <div class="container">
-            <h2 style="color: #d4af73; class="section-title">Detalles de Nuestra Boda</h2>
-			 <h2 style="color: #d4af73; class="section-title">Wedding Details</h2>
-               <p style="color: #d4af73;"class="hero-date">Más por venir...</p>
-			<p style="color: #80602d;"class="hero-date">More to come...</p>
-                </div>
-            </div>
+            <h2 class="section-title spanish-text">Detalles de Nuestra Boda</h2>
+            <h2 class="section-title english-text">Wedding Details</h2>
+            <p class="coming-soon spanish-text">Más por venir...</p>
+            <p class="coming-soon english-text">More to come...</p>
         </div>
     </section>
 
     <!-- Photo Gallery -->
-    <section id="gallery" class="section" style="text-align: center;">
+    <section id="gallery" class="section">
         <div class="container">
-            <h2 style="color: #d4af73; class="section-title">Our Gallery</h2>
+            <h2 class="section-title">Our Gallery</h2>
             <div class="gallery-grid">
                 <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
-                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1544717305-2782549b5136?ixlib=rb-4.0.3&auto=format&fit=crop&w-800&q=80');"></div>
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1544717305-2782549b5136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
                 <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1511988617509-a57c8a288659?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
                 <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1529254479751-fbacb4c7a587?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
             </div>
         </div>
     </section>
 
-   
-
     <!-- Footer -->
-    <footer class="footer" style="text-align: center;">
+    <footer class="footer">
         <div class="container">
             <p class="footer-text">With love, Rigo & Roxana</p>
-			  <p class="footer-subtext">16 de enero, 2027</p>
-            <p class="footer-subtext">January 16, 2027</p>
-			  <p class="footer-subtext">Jalisco, MX</p>
-			<p class="footer-note">Hecho con ❤️ para nuestra boda</p>
-            <p class="footer-note">Made with ❤️ for our wedding</p>
+            <p class="footer-note spanish-text">Hecho con ❤️ para nuestra boda</p>
+            <p class="footer-note english-text">Made with ❤️ for our wedding</p>
         </div>
     </footer>
 
     <!-- Scripts -->
     <script src="countdown.js"></script>
-    <script src="navigation.js"></script>
-    <script src="rsvp.js"></script>
+    <script>
+        // Simple navigation scroll effect
+        document.querySelectorAll('.nav-links a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Navbar shadow on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('.top-nav');
+            if (window.scrollY > 50) {
+                nav.style.boxShadow = '0 5px 25px rgba(0, 0, 0, 0.15)';
+            } else {
+                nav.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+            }
+        });
+    </script>
 </body>
 </html>
