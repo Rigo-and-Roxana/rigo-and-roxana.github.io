@@ -39,9 +39,9 @@
     <!-- Hero Section -->
     <section id="home" class="hero" style="text-align: center;">
         <div class="hero-content">
-            <h1 style="color: #d4af73;" class="hero-title">We're getting married!</h1>
-            <h1 class="hero-title">Rigo <span>&</span> Roxana</h1>
-            <p class="hero-date">October 16, 2027 • Concepción de Buenos Aires, Jalisco</p>
+            <h1 style="color: #d4af73;" class="hero-title">¡Te invitamos cordialmente a nuestra boda! (We cordially invite you to our wedding!)¡</h1>
+            <h1 class="hero-title">Roxana <span>&</span> Rigo</h1>
+            <p class="hero-date">January 16, 2027 • Concepción de Buenos Aires, Jalisco, MX</p>
             <div class="countdown">
                 <h4>Countdown to our big day</h4>
                 <div class="countdown-container">
@@ -78,7 +78,7 @@
                     <div class="detail-icon">
                         <i class="fas fa-calendar-alt"></i>
                     </div>
-                    <h3 class="detail-title">Date & Time</h3>
+                    <h3 class="detail-title">(Date & Time)</h3>
                     <p class="detail-text">Saturday, January 16, 2027</p>
                     <p class="detail-text">Ceremony: 4:00 PM</p>
                     <p class="detail-text">Reception to follow</p>
@@ -110,99 +110,6 @@
     </section>
 
    
-
-    <!-- RSVP Section -->
-    <section id="rsvp" class="section rsvp-section" style="text-align: center;">
-        <div class="container">
-            <h2 style="color: #d4af73; class="section-title">RSVP</h2>
-            <p class="rsvp-subtitle">Please respond by September 12, 2024</p>
-            
-            <div class="rsvp-form-container">
-                <!-- Note about RSVP functionality -->
-                <div class="rsvp-note">
-                    <p><i class="fas fa-info-circle"></i> This form submits to Google Sheets. <a href="#setup-instructions">See setup instructions below.</a></p>
-                </div>
-                
-                <form id="rsvpForm" class="rsvp-form">
-                    <div class="form-group">
-                        <label for="name">Full Name(s) *</label>
-                        <input type="text" id="name" name="name" required placeholder="Enter your full name">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email Address *</label>
-                        <input type="email" id="email" name="email" required placeholder="Enter your email">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="guests">Number of Guests *</label>
-                        <select id="guests" name="guests" required>
-                            <option value="" disabled selected>Select number of guests</option>
-                            <option value="1">1 (Just me)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5+</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>Will you attend? *</label>
-                        <div class="radio-group">
-                            <label class="radio-option">
-                                <input type="radio" name="attending" value="Yes" required>
-                                <span class="radio-button"></span>
-                                <span>Joyfully Accepts</span>
-                            </label>
-                            <label class="radio-option">
-                                <input type="radio" name="attending" value="No" required>
-                                <span class="radio-button"></span>
-                                <span>Regretfully Declines</span>
-                            </label>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="dietary">Dietary Restrictions / Allergies</label>
-                        <textarea id="dietary" name="dietary" rows="3" placeholder="Vegetarian, gluten-free, allergies, etc."></textarea>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">Message for the Couple</label>
-                        <textarea id="message" name="message" rows="3" placeholder="Share your well wishes or memories"></textarea>
-                    </div>
-                    
-                    <button type="submit" class="submit-btn">Submit RSVP</button>
-                </form>
-                
-                <div id="formMessage" class="form-message"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Setup Instructions (Hidden by default) -->
-    <section id="setup-instructions" class="section setup-section">
-        <div class="container">
-            <h2 class="section-title">Setup Instructions</h2>
-            <div class="instructions">
-                <h3>To make this website work:</h3>
-                <ol>
-                    <li>Replace all placeholder text with your details</li>
-                    <li>Update the wedding date in the HTML and countdown.js</li>
-                    <li>Replace Unsplash image URLs with your own photos</li>
-                    <li><strong>For RSVP functionality:</strong>
-                        <ul>
-                            <li>Create a Google Form and link it to Google Sheets</li>
-                            <li>Use a service like <a href="https://www.tally.so/" target="_blank">Tally Forms</a> or <a href="https://formspree.io/" target="_blank">Formspree</a> for easier setup</li>
-                            <li>Update the form action URL in rsvp.js</li>
-                        </ul>
-                    </li>
-                    <li>Upload to GitHub and enable GitHub Pages in repository settings</li>
-                </ol>
-                <button id="toggleInstructions" class="toggle-btn">Hide Instructions</button>
-            </div>
-        </div>
-    </section>
 
     <!-- Footer -->
     <footer class="footer" style="text-align: center;">
