@@ -568,7 +568,7 @@
     </style>
 </head>
 <body>
-    <!-- Navigation Bar -->
+   <!-- Desktop Navigation (shown on tablets/desktop) -->
     <nav class="top-nav">
         <div class="nav-content">
             <a href="#home" class="nav-logo">R & R</a>
@@ -580,6 +580,27 @@
         </div>
     </nav>
     
+    <!-- Mobile Navigation (hidden on desktop, shown on mobile) -->
+    <nav class="mobile-nav">
+        <div class="mobile-nav-content">
+            <a href="#home" class="mobile-logo">R & R</a>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+            <ul class="mobile-menu-links">
+                <li><a href="#home">Início // Home</a></li>
+                <li><a href="#details">Detalles // Details</a></li>
+                <li><a href="#gallery">Galería // Gallery</a></li>
+            </ul>
+        </div>
+        
+        <!-- Overlay for closing menu -->
+        <div class="menu-overlay"></div>
+    </nav>
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
