@@ -36,10 +36,11 @@
             background: rgba(255, 254, 249, 0.95);
             box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
             z-index: 1000;
-            padding: 0;
+            padding: 15x 0;
             text-align: center;
             border-bottom: 1px solid rgba(212, 175, 115, 0.3);
-            height: 70px;
+            height: auto;
+            min-height: 50x;
             display: flex;
             align-items: center;
         }
@@ -51,7 +52,7 @@
             justify-content: center;
             align-items: center;
             gap: 30px;
-            padding: 0 15px;
+            padding: 0 20px;
         }
         
         .nav-logo {
@@ -60,15 +61,18 @@
             color: #d4af73;
             text-decoration: none;
             letter-spacing: 1px;
+            flex-shrink: 0;
         }
         
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 30px;
+            gap: 60px;
             margin: 0;
             padding: 0;
             justify-content: center;
+            flex-wrap: wrap;
+            flex: 1;
         }
         
         .nav-links a {
