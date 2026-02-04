@@ -273,6 +273,106 @@
             color: #d4af73;
             letter-spacing: 1px;
         }
+
+
+/* RSVP Section */
+        .rsvp-section {
+            background: linear-gradient(135deg, #f8f5f0 0%, #fff5e6 100%);
+            border-top: 1px solid rgba(212, 175, 115, 0.2);
+            border-bottom: 1px solid rgba(212, 175, 115, 0.2);
+        }
+        
+        .rsvp-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(212, 175, 115, 0.2);
+        }
+        
+        .rsvp-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3.5rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        
+        .rsvp-subtitle {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.4rem;
+            color: #80602d;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        
+        .rsvp-instructions {
+            background: #f9f5f0;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 30px 0;
+            border-left: 4px solid #d4af73;
+            text-align: left;
+        }
+        
+        .rsvp-instructions h3 {
+            color: #80602d;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+        
+        .rsvp-instructions ol {
+            padding-left: 20px;
+            color: #666;
+        }
+        
+        .rsvp-instructions li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        .google-form-link {
+            display: inline-block;
+            background: #d4af73;
+            color: white;
+            text-decoration: none;
+            padding: 18px 40px;
+            font-size: 1.3rem;
+            border-radius: 50px;
+            margin: 30px 0;
+            transition: all 0.3s ease;
+            font-family: 'Playfair Display', serif;
+            font-weight: 500;
+            box-shadow: 0 5px 15px rgba(212, 175, 115, 0.3);
+        }
+        
+        .google-form-link:hover {
+            background: #c19a5b;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(212, 175, 115, 0.4);
+        }
+        
+        .google-form-link i {
+            margin-right: 10px;
+        }
+        
+        .rsvp-note {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f0f7ff;
+            border-radius: 12px;
+            color: #2c3e50;
+            font-style: italic;
+            border-left: 4px solid #80602d;
+        }
+        
+        .rsvp-deadline {
+            font-weight: bold;
+            color: #d4af73;
+        }
+
         
         /* Gallery */
         .gallery-grid {
@@ -489,6 +589,7 @@
                 <ul class="nav navbar-nav">
                     <li><a href="#home">Início // Home</a></li>
                     <li><a href="#details">Detalles // Details</a></li>
+                    <li><a href="#rsvp">RSVP</a></li>
                     <li><a href="#gallery">Galería // Gallery</a></li>
                 </ul>
             </div>
@@ -546,6 +647,57 @@
         </div>
     </section>
 
+ <!-- RSVP Section -->
+    <section id="rsvp" class="section rsvp-section">
+        <div class="container">
+            <h2 class="section-title spanish-text">Confirmación de Asistencia // RSVP</h2>
+            <div class="divider"></div>
+            
+            <div class="rsvp-container">
+                <h3 class="rsvp-title">Por favor confirma tu asistencia</h3>
+                <h3 class="rsvp-title">Please confirm your attendance</h3>
+                
+                <p class="rsvp-subtitle">
+                    ¡Nos encantaría que formes parte de nuestro día especial!<br>
+                    We would love for you to be part of our special day!
+                </p>
+                
+                <div class="rsvp-instructions">
+                    <h3><i class="fas fa-info-circle"></i> How to RSVP:</h3>
+                    <ol>
+                        <li>Click the "RSVP Now" button below to open the Google Form</li>
+                        <li>Fill out all required fields with your information</li>
+                        <li>Submit the form - your response will be automatically recorded</li>
+                        <li>You'll receive a confirmation message once submitted</li>
+                    </ol>
+                </div>
+                
+                <!-- REPLACE THIS LINK WITH YOUR ACTUAL GOOGLE FORM LINK -->
+                <a href="https://forms.gle/YOUR-GOOGLE-FORM-LINK-HERE" 
+                   target="_blank" 
+                   class="google-form-link">
+                    <i class="fas fa-edit"></i> RSVP Now / Confirmar Ahora
+                </a>
+                
+                <div class="rsvp-note">
+                    <p><i class="fas fa-calendar-alt"></i> <span class="rsvp-deadline">Please RSVP by December 1, 2026</span></p>
+                    <p>Your timely response helps us plan our celebration perfectly!</p>
+                </div>
+                
+                <div class="rsvp-instructions" style="margin-top: 30px; background: #f0f7ff;">
+                    <h3><i class="fas fa-wrench"></i> Need to Set Up Your Google Form?</h3>
+                    <ol>
+                        <li>Go to <a href="https://forms.google.com" target="_blank">forms.google.com</a></li>
+                        <li>Create a new form with questions for name, email, number of guests, attendance, dietary restrictions</li>
+                        <li>Click "Send" and copy the form link</li>
+                        <li>Replace the link above with your actual Google Form link</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
     <!-- Photo Gallery -->
     <section id="gallery" class="section">
         <div class="container">
