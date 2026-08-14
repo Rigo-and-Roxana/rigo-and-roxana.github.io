@@ -350,6 +350,78 @@
             font-weight: bold;
             color: #d4af73;
         }
+        /* Hotels Section */
+        .hotels-section {
+            background: #fcfaf5;
+            border-top: 1px solid rgba(212, 175, 115, 0.2);
+            border-bottom: 1px solid rgba(212, 175, 115, 0.2);
+        }
+
+        .hotels-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+            max-width: 1100px;
+            margin: 50px auto 0;
+            justify-content: center;
+        }
+
+        .hotel-card {
+            background: white;
+            padding: 30px 20px 25px;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+            border: 1px solid rgba(212, 175, 115, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .hotel-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        .hotel-card i {
+            font-size: 2.8rem;
+            color: #d4af73;
+            margin-bottom: 15px;
+        }
+
+        .hotel-card h3 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.0rem;
+            color: #2c3e50;
+            margin-bottom: 12px;
+        }
+
+        .hotel-card p {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.0rem;
+            color: #555;
+            margin: 6px 0;
+            line-height: 1.5;
+        }
+
+        .hotel-card .hotel-addr {
+            font-style: italic;
+            color: #80602d;
+            font-size: 0.95rem;
+        }
+
+        .hotel-card .hotel-phone {
+            font-weight: 500;
+            color: #2c3e50;
+        }
+
+        .hotel-card .hotel-distance {
+            margin-top: 12px;
+            font-size: 0.95rem;
+            color: #666;
+            background: #f5f0e8;
+            display: inline-block;
+            padding: 4px 16px;
+            border-radius: 30px;
+        }
 
         
         /* Gallery */
@@ -567,6 +639,7 @@
                 <ul class="nav navbar-nav">
                     <li><a href="#home">Início • Home</a></li>
                     <li><a href="#details">Detalles • Details</a></li>
+                    <li><a href="#hotels">Hoteles • Hotels</a></li>
                     <li><a href="#rsvp">RSVP</a></li>
                     <li><a href="#gallery">Galería • Gallery</a></li>
                 </ul>
@@ -625,9 +698,64 @@
             <p class="coming-soon spanish-text">Salon Hacienda El Roble Concepción de Buenos Aires</p> 
             <p class="coming-soon spanish-text">Calle Alcalde Eje Pte. 29, Concepción de Buenos Aires,</p>
             <p class="coming-soon spanish-text">49170 Concepción de Buenos Aires, Jal., Mexico </p>
-            <p class="hero-date location spanish-text">Más por venir... More to come...</p>
         </div>
     </section>
+
+
+    <!-- Hotels Section -->
+    <section id="hotels" class="section hotels-section">
+        <div class="container">
+            <h2 class="section-title spanish-text">Sugerencia de hospedaje • Suggested accomodations</h2>
+            <div class="divider"></div>
+            <p class="coming-soon" style="font-size:1.4rem; margin-bottom:20px; color:#5a4a3a;">
+                <i class="fas fa-bed" style="color:#d4af73; margin-right:10px;"></i>
+                Opciones para tu estancia • Local hotel options
+            </p>
+
+            <div class="hotels-grid">
+                <!-- Hotel 1 -->
+                <div class="hotel-card">
+                    <i class="fas fa-hotel"></i>
+                    <h3>Hotel Linda Vista</h3>
+                    <p class="hotel-addr"><i class="fas fa-map-pin" style="color:#d4af73;"></i> Constitución y Corona, Calle Ignacio Silva Romo Nte 1, 49170 Concepción de Buenos Aires, Jalisco</p>
+                    <p class="hotel-phone"><i class="fas fa-phone-alt"></i> +52 372 426 0110</p>
+                    <a href="https://www.google.com/maps/place/Hotel+linda+vista/@19.9792715,-103.2605617,906m/data=!3m2!1e3!4b1!4m9!3m8!1s0x842f73a1aef63f41:0xe8551031355a429c!5m2!4m1!1i2!8m2!3d19.9792715!4d-103.2605617!16s%2Fg%2F11lg2slspl?entry=ttu&g_ep=EgoyMDI2MDgxMi4wIKXMDSoASAFQAw%3D%3D" 
+                       target="_blank" 
+                       rel="noopener" 
+                       class="hotel-map-link">
+                        <i class="fas fa-map-marked-alt"></i> Ver en Google Maps • View on Maps
+                    </a>
+                </div>
+
+                <!-- Hotel 2 -->
+                <div class="hotel-card">
+                    <i class="fas fa-hotel"></i>
+                    <h3>Casa Mendoza Hotel Boutique</h3>
+                    <p class="hotel-addr"><i class="fas fa-map-pin" style="color:#d4af73;"></i> Agustín Melgar #41 Colonia Lázaro Cárdenas del Rio, 49170 Concepción de Buenos Aires, Jalisco</p>
+                    <p class="hotel-phone"><i class="fas fa-phone-alt"></i> +52 331 458 3144</p>
+                   <a href="https://www.google.com/maps/place/Casa+Mendoza+Hotel+Boutique/@19.9846473,-103.2599895,1812m/data=!3m1!1e3!4m13!1m2!2m1!1sAgust%C3%ADn+Melgar+%2341+Colonia+L%C3%A1zaro+C%C3%A1rdenas+del+Rio,+49170+Concepci%C3%B3n+de+Buenos+Aires,+Jalisco!3m9!1s0x842f73e7d70219b9:0x861fec93475ef6f2!5m2!4m1!1i2!8m2!3d19.9898815!4d-103.2568067!15sCmFBZ3VzdMOtbiBNZWxnYXIgIzQxIENvbG9uaWEgTMOhemFybyBDw6FyZGVuYXMgZGVsIFJpbywgNDkxNzAgQ29uY2VwY2nDs24gZGUgQnVlbm9zIEFpcmVzLCBKYWxpc2NvWmEiX2FndXN0w61uIG1lbGdhciAjNDEgY29sb25pYSBsw6F6YXJvIGPDoXJkZW5hcyBkZWwgcmlvIDQ5MTcwIGNvbmNlcGNpw7NuIGRlIGJ1ZW5vcyBhaXJlcyBqYWxpc2NvkgEFaG90ZWyaASRDaGREU1VoTk1HOW5TMFZKUTBGblRVTm5YeTFQV2pCUlJSQULgAQD6AQQIABBF!16s%2Fg%2F11rl5dd2g9?entry=ttu&g_ep=EgoyMDI2MDgxMi4wIKXMDSoASAFQAw%3D%3D" 
+                       target="_blank" 
+                       rel="noopener" 
+                       class="hotel-map-link">
+                        <i class="fas fa-map-marked-alt"></i> Ver en Google Maps • View on Maps
+                    </a>
+                </div>
+
+                <!-- Hotel 3 -->
+                <div class="hotel-card">
+                    <i class="fas fa-hotel"></i>
+                    <h3>Hotel Constitución</h3>
+                    <p class="hotel-addr"><i class="fas fa-map-pin" style="color:#d4af73;"></i>Calle Constitución Ote. 55 A, Centro, 49170 Concepción de Buenos Aires, Jalisco</p>
+                    <p class="hotel-phone"><i class="fas fa-phone-alt"></i> +52 372 426 0219</p>
+                    <a href="https://www.google.com/maps/place/HOTEL+CONSTITUCI%C3%93N/@19.9794736,-103.2575822,906m/data=!3m1!1e3!4m21!1m11!3m10!1s0x842f722e5f10f553:0xf0332a75c48246e3!2sHOTEL+CONSTITUCI%C3%93N!5m2!4m1!1i2!8m2!3d19.9794736!4d-103.2575822!10e1!16s%2Fg%2F12htb9w6z!3m8!1s0x842f722e5f10f553:0xf0332a75c48246e3!5m2!4m1!1i2!8m2!3d19.9794736!4d-103.2575822!16s%2Fg%2F12htb9w6z?entry=ttu&g_ep=EgoyMDI2MDgxMi4wIKXMDSoASAFQAw%3D%3D" 
+                       target="_blank" 
+                       rel="noopener" 
+                       class="hotel-map-link">
+                        <i class="fas fa-map-marked-alt"></i> Ver en Google Maps • View on Maps
+                    </a>
+                </div>
+
+
 
  <!-- RSVP Section -->
     <section id="rsvp" class="section rsvp-section">
@@ -646,7 +774,7 @@
                 
 
                 
-                <!-- REPLACE THIS LINK WITH YOUR ACTUAL GOOGLE FORM LINK -->
+                <!-- GOOGLE FORM LINK -->
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSdhuNfbsa_99-j6o46pZDidCwObzibz_aN3l5M11RcI5iLiBw/viewform?usp=dialog" 
                    target="_blank" 
                    class="google-form-link">
